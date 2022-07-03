@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <!-- Navigation Section-->
+        <div class="wrapper">
+            <nav>
+                <input type="checkbox" id="show-search">
+                <input type="checkbox" id="show-menu">
+                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+                <div class="content">
+                    <div class="logo"><a href="#">VintageRally</a></div>
+                    <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <a href="#" class="desktop-link">Register</a>
+                            <input type="checkbox" id="show-features">
+                            <label for="show-features">Register</label>
+                            <ul>
+                                <li><a href="login.html">Log In</a></li>
+                                <li><a href="signup.html">Sign Up</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="q-a.html">Q&A</a></li>
+                        <li><a href="drivers.html">Drivers</a></li>
+                    </ul>
+                </div>
+                <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+                <form action="#" class="search-box">
+                    <input type="text" placeholder="Type Something to Search..." required>
+                    <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+              </form>
+            </nav>
+        </div>
+
+        <div class="top-section">
+            <h1 class="main-heading">Vintage Rally Club</h1>
+        </div>
+
+        <h2 class="sub_heading">Welcome To Vintage Rally Club. Home To Vintages</h2>
+        <p class="main_paragraph">Looking For A Rally To Watch? Looking for fast entertainment? Well look no futher. Here at Vintage Rally Club we got you covered.
+            We provide entertainment and love througout our rally.
+        </p>
+
+        <div class="row-3">
+            <div class="column-3">
+                <div class="button_section">
+                    <button class="index_button" type="button"><a class="index_button_hyperlink" href="about.html">Learn More?</a></button>
+                </div>
+            </div>
+            <div class="column-3">
+                <div class="button_section">
+                    <button class="index_button" type="button"><a class="index_button_hyperlink" href="contact.html">Connect Us</a></button>
+                </div>
+            </div>
+            <div class="column-3">
+                <div class="button_section">
+                    <button class="index_button" type="button"><a class="index_button_hyperlink" href="drivers.html">See Drivers</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-container">
+            <div class="row-2">
+                <div class="column-2">
+                    </div>
+                <div class="column-2">
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/slideshow1.jpeg" alt="slideshow-1" style="width:100%">
+                <div class="text">Car 1</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/slideshow2.jpeg" alt="slideshow-2" style="width:100%">
+                <div class="text">Car 2</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/slideshow3.jpeg" alt="slideshow-3" style="width:100%">
+                <div class="text">Car 3</div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>    
+        <!-- Footer Section -->
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <h3>Vintage-Rally-<span>Club</span></h3>
+                <p class="footer-links">
+                    <a href="index.html">Home</a> ·
+                    <a href="about.html">About</a> ·
+                    <a href="contact.html">Contact</a> ·
+                    <a href="signup.html">Register</a> ·
+                    <a href="q-a.html">Q&A</a> ·
+                    <a href="drivers.html">Drivers</a>
+                </p>
+                <p class="footer-company-name">Vintage Rally Club .LTD © 2022</p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <p>Contact Us</p>
+                <form action="#" method="post">
+                    <input type="text" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button>Send</button>
+                </form>
+            </div>
+        </footer>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </body>
+</html>
